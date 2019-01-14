@@ -1,4 +1,4 @@
-import {calculateDistance} from "../js/roadTrip";
+import {calculateDistance} from "../js/lib.js";
 
 test('calculate distance that can drive', () => {
     const fuelConsumption = 9.9;
@@ -19,11 +19,6 @@ test('calculate distance that can drive', () => {
 test('calculate distance that can drive', () => {
     const fuelConsumption = 0;
     const amountOfFuel = 15.2;
-    let result;
-    if (fuelConsumption > 0 && amountOfFuel >= 0) {
-        result = Math.round(amountOfFuel * 100 / fuelConsumption);
-    } else {
-        result = 0;
-    }
+    let result = calculateDistance(fuelConsumption, amountOfFuel);
     expect(result).toBe(0);
 });
