@@ -8,7 +8,7 @@ test('With the consumption of "9.9" and the amount of fuel "45.4" - the distance
     expect(result).toBe(459);
 });
 
-test('With the consumption of "23.8" and the amount of fuel "15.2" - the distance "0"', () => {
+test('With the consumption of "23.8" and the amount of fuel "15.2" - the distance "64"', () => {
     const fuelConsumption = 23.8;
     const amountOfFuel = 15.2;
     const result = calculateDistance(fuelConsumption, amountOfFuel);
